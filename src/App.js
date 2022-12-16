@@ -1,24 +1,25 @@
-import logo from './logo.svg';
+
 import './App.css';
+import Resume from './component/Resume';
+import Sidebar from './component/Sidebar';
+import NoteState from './context/NoteState';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+    <NoteState>
+    <div className='flex '>
+
+    <div className="w-[30%] bg-gray-200 h-screen">
+      <Sidebar/>
     </div>
+    <div className="w-[70%] h-screen">
+      <Resume/>
+    </div>
+    </div>
+
+    
+    </NoteState>
   );
 }
 
